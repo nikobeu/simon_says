@@ -2,6 +2,7 @@
 
 import random
 
+
 befehl = 0
 fakebefehl = 0
 erwartung = 0
@@ -73,8 +74,3 @@ while True:
         print(fr"simon says", str(befehl))
         print(simon)
         input()
-
-    else:
-        print("du hast nen schaden")
-
-
