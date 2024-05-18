@@ -11,6 +11,35 @@ erwartung = 0
 press = 0
 points = 0
 highscore = 100
+numpad_8_pressed = False
+numpad_4_pressed = False
+numpad_6_pressed = False
+numpad_2_pressed = False
+def on_key_event(event):
+    global numpad_8_pressed
+    if event.name == '8':
+        numpad_8_pressed = True
+    else:
+        pass
+def on_key_event(event):
+    global numpad_4_pressed
+    if event.name == '4':
+        numpad_4_pressed = True
+    else:
+        pass
+def on_key_event(event):
+    global numpad_6_pressed
+    if event.name == '6':
+        numpad_6_pressed = True
+    else:
+        pass
+def on_key_event(event):
+    global numpad_2_pressed
+    if event.name == '2':
+        numpad_2_pressed = True
+    else:
+        pass
+
 
 while True:
     while True:
@@ -70,7 +99,7 @@ while True:
             print(fr"drücke jetzt", str(fakebefehl))
             print("\n\naktuelle punkte :", str(points),       "aktueller highscore : ", str(highscore))
 
-            print(simon)
+            #print(simon)
             time.sleep(3)
             points = points+1
             break
@@ -79,11 +108,11 @@ while True:
             # hier musst du wieder einstellen wie du das ganze auf den lcd machen willst
             print(fr"simon says", str(befehl))
             print("\n\naktuelle punkte :", str(points),       "aktueller highscore : ", str(highscore))
-            print(simon)
-            keyboard.wait(str(erwartung))
+            #print(simon)
             points = points+1
             erwartung = False
             time.sleep(1)
+            break
 
         else:
             break
