@@ -24,7 +24,6 @@ while True:
 
             if simon > int(5):
                 if simon == 5:
-                    befehl = str("fick dich")
                     break
                 elif simon == 6:
                     befehl = str("Links")
@@ -46,7 +45,6 @@ while True:
                     print("du idiot hast nen fehler gemacht1")
             else:
                 if simon == 5:
-                    befehl = str("fick dich")
                     break
                 if simon == 1:
                     fakebefehl = str("Links")
@@ -70,14 +68,22 @@ while True:
         if not fakebefehl == False:
             #hier musst du einstellen wie du das ganze auf den lcd machen willst
             print(fr"drücke jetzt", str(fakebefehl))
+            print("\n\naktuelle punkte :", str(points),       "aktueller highscore : ", str(highscore))
+
             print(simon)
             time.sleep(3)
+            points = points+1
             break
 
-
         elif not befehl == False:
-        # hier musst du wieder einstellen wie du das ganze auf den lcd machen willst
+            # hier musst du wieder einstellen wie du das ganze auf den lcd machen willst
             print(fr"simon says", str(befehl))
+            print("\n\naktuelle punkte :", str(points),       "aktueller highscore : ", str(highscore))
             print(simon)
             keyboard.wait(str(erwartung))
+            points = points+1
+            erwartung = False
+            time.sleep(1)
 
+        else:
+            break
